@@ -29,7 +29,6 @@
         self.favorited = [dictionary[@"favorited"] boolValue];
         self.retweetCount = [dictionary[@"retweet_count"] intValue];
         self.retweeted = [dictionary[@"retweeted"] boolValue];
-        self.imageURL = dictionary[@"profile_image_url_https"];
         //self.replied = [dictionary[@""] boolValue];
         //self.replyCount = [dictionary[@"reply_count"] intValue];
         

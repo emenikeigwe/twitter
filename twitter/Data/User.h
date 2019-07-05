@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 //properties for the user class
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *screenName;
+@property (strong, nonatomic) NSString *imageURL;
 
 //intializer that sets properties using dictionary
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;

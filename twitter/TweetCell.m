@@ -8,6 +8,12 @@
 
 #import "TweetCell.h"
 
+static NSString * const beforeLike = @"favor-icon";
+static NSString * const afterLike = @"favor-icon-red";
+static NSString * const reply = @"reply-icon";
+static NSString * const beforeRetweet = @"retweet-icon";
+static NSString * const afterRetweet = @"retweet-icon-green";
+
 @implementation TweetCell
 
 - (void)awakeFromNib {
@@ -19,6 +25,30 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (IBAction)didTapLike:(id)sender {
+    self.tweets.favorited = !(self.tweets.favorited);
+    if (self.tweets.favorited){
+        self.tweets.favoriteCount += 1;
+        [self.likeButton setImage:[UIImage imageNamed:afterLike] forState:UIControlStateNormal];
+    }
+    else{
+        self.tweets.favoriteCount -= 1;
+        [self.likeButton setImage:[UIImage imageNamed:beforeLike] forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)didTapRetweet:(id)sender {
+    self.tweets.retweeted = !(self.tweets.retweeted);
+    if (self.tweets.retweeted){
+        self.tweets.retweetCount += 1;
+        [self.retweetButton setImage:[UIImage imageNamed:afterRetweet] forState:UIControlStateNormal];
+    }
+    else{
+        self.tweets.retweetCount -= 1;
+        [self.retweetButton setImage:[UIImage imageNamed:beforeRetweet] forState:UIControlStateNormal];
+    }
 }
 
 @end
