@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface ComposeViewController : UIViewController
+
 @property (nonatomic, weak) id<ComposeViewControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UITextView *composeTweet;
 

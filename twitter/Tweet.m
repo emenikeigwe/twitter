@@ -10,6 +10,7 @@
 #import "User.h"
 
 @implementation Tweet
+
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self) {
@@ -54,6 +55,7 @@
     }
     return self;
 }
+
 + (NSMutableArray *)tweetsWithArray:(NSArray *)dictionaries{
     NSMutableArray *tweets = [NSMutableArray array];
     for (NSDictionary *dictionary in dictionaries) {
