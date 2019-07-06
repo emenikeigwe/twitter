@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 //  ComposeViewController.h
 @protocol ComposeViewControllerDelegate
 
+//function required to be implemented
 - (void)didTweet:(Tweet *)tweet;
 
 @end

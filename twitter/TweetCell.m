@@ -28,6 +28,7 @@ static NSString * const afterRetweet = @"retweet-icon-green";
     // Configure the view for the selected state
 }
 
+//Action on press of like button
 - (IBAction)didTapLike:(id)sender {
     self.tweets.favorited = !(self.tweets.favorited);
     if (self.tweets.favorited){
@@ -57,6 +58,7 @@ static NSString * const afterRetweet = @"retweet-icon-green";
     
 }
 
+//Action on press of retweet button
 - (IBAction)didTapRetweet:(id)sender {
     self.tweets.retweeted = !(self.tweets.retweeted);
     if (self.tweets.retweeted){

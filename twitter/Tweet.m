@@ -30,16 +30,11 @@
         self.favorited = [dictionary[@"favorited"] boolValue];
         self.retweetCount = [dictionary[@"retweet_count"] intValue];
         self.retweeted = [dictionary[@"retweeted"] boolValue];
-        //self.replied = [dictionary[@""] boolValue];
-        //self.replyCount = [dictionary[@"reply_count"] intValue];
         
-        // TODO: initialize user
         // --> initialize user
         NSDictionary *user = dictionary[@"user"];
         self.user = [[User alloc] initWithDictionary:user];
         
-        
-        // TODO: Format and set createdAtString
         // --> Format createdAt date string
         NSString *createdAtOriginalString = dictionary[@"created_at"];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
